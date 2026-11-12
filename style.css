@@ -1,242 +1,217 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechStore - Produtos</title>
-</head>
-<body>
-
-    <!-- ============================================================ -->
-    <!-- CABEÇALHO / BANNER (igual ao da página inicial)              -->
-    <!-- ============================================================ -->
-    <table border="1" width="100%" cellpadding="12">
-        <tr>
-            <td align="center">
-                <img src="banner.png" alt="Banner da TechStore" width="100%">
-                <h1>TechStore</h1>
-                <p>Informática e Eletrônicos</p>
-            </td>
-        </tr>
-    </table>
+/* =============================================================
+   TECHSTORE - style.css
+   Cada linha tem um comentário dizendo o que ela faz.
+   Não gostou de algo? Apague a linha (ou troque o valor) e veja
+   o que muda. Dica: depois de salvar, aperte Ctrl + F5.
+   ============================================================= */
 
 
-    <!-- ============================================================ -->
-    <!-- MENU DE NAVEGAÇÃO ENTRE PÁGINAS                               -->
-    <!-- "Início" volta para a página inicial; "Produtos" é esta.     -->
-    <!-- ============================================================ -->
-    <table border="1" width="100%" cellpadding="8">
-        <tr>
-            <td align="center">
-                <a href="index.html">Início</a> |
-                <a href="produtos.html">Produtos</a> |
-                <a href="index.html#sobre">Sobre</a> |
-                <a href="index.html#contato">Contato</a>
-            </td>
-        </tr>
-    </table>
+/* -------------------------------------------------------------
+   0. FONTES
+   ------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@600;700&display=swap"); /* baixa duas fontes do Google Fonts: Barlow (textos) e Barlow Condensed (títulos, parecida com a letra do banner) */
 
 
-    <!-- ============================================================ -->
-    <!-- TÍTULO + MENU DE CATEGORIAS (links âncora internos)          -->
-    <!-- ============================================================ -->
-    <h2>Catálogo de Produtos</h2>
-    <p>
-        <a href="#notebooks">Notebooks</a> |
-        <a href="#monitores">Monitores</a> |
-        <a href="#perifericos">Periféricos</a> |
-        <a href="#componentes">Componentes</a>
-    </p>
+/* -------------------------------------------------------------
+   1. PÁGINA INTEIRA
+   ------------------------------------------------------------- */
+body {
+  font-family: "Barlow", Arial, sans-serif;   /* fonte dos textos; se a Barlow não carregar, usa Arial */
+  background-color: #f4f3f8;                  /* cor de fundo da página (cinza bem claro, quase branco) */
+  color: #2a2640;                             /* cor padrão de todo o texto (grafite escuro, mais suave que o preto puro) */
+  margin: 0;                                  /* tira a margem branca que o navegador coloca em volta da página */
+  line-height: 1.6;                           /* espaço entre as linhas do texto, facilita a leitura */
+}
+
+img {
+  max-width: 100%;                            /* nenhuma imagem passa da largura da tela (importante no celular) */
+  display: block;                             /* imagem vira um bloco, isso remove um espacinho estranho embaixo dela */
+  margin: 0 auto;                             /* centraliza a imagem na horizontal */
+}
 
 
-    <!-- ============================================================ -->
-    <!-- CATEGORIA: NOTEBOOKS                                          -->
-    <!-- ============================================================ -->
-    <h3 id="notebooks">Notebooks</h3>
-    <table border="1" width="100%" cellpadding="12">
-        <tr>
-            <td align="center" width="33%">
-                <img src="notebookgamer.png" alt="Notebook Gamer" width="150">
-                <h3>Notebook Gamer</h3>
-                <p>
-                    <b>Destaque:</b> Mais vendido<br>
-                    Processador: a preencher<br>
-                    Memória: a preencher<br>
-                    Garantia: a preencher
-                </p>
-                <p><b>R$ 0.000,00</b></p>
-                <!-- Botão que abre o WhatsApp com a mensagem pronta -->
-                <a href="https://wa.me/5543999259899?text=Ola! Tenho interesse no Notebook Gamer">
-                    Comprar pelo WhatsApp
-                </a>
-            </td>
+/* -------------------------------------------------------------
+   2. TABELAS EM GERAL (tira o visual de planilha)
+   ------------------------------------------------------------- */
+table {
+  border: none;                               /* remove a borda externa que vem do border="1" */
+  border-collapse: collapse;                  /* junta as bordas das células numa só */
+}
 
-            <td align="center" width="33%">
-                <!-- Coloque aqui a imagem (ex.: notebook2.png) -->
-                [ IMAGEM DO PRODUTO ]<br>
-                <!-- <img src="notebook2.png" alt="Notebook" width="150"> -->
-                <h3>Notebook (novo)</h3>
-                <p>Especificações a preencher.</p>
-                <p><b>R$ 0.000,00</b></p>
-                <a href="https://wa.me/5543999259899?text=Ola! Tenho interesse neste notebook">
-                    Comprar pelo WhatsApp
-                </a>
-            </td>
-
-            <td align="center" width="33%">
-                &nbsp;<!-- célula livre para adicionar mais um produto -->
-            </td>
-        </tr>
-    </table>
+td {
+  border: none;                               /* remove a borda de cada célula */
+}
 
 
-    <!-- ============================================================ -->
-    <!-- CATEGORIA: MONITORES                                          -->
-    <!-- ============================================================ -->
-    <h3 id="monitores">Monitores</h3>
-    <table border="1" width="100%" cellpadding="12">
-        <tr>
-            <td align="center" width="33%">
-                <img src="monitor.png" alt="Monitor 24 polegadas" width="150">
-                <h3>Monitor 24"</h3>
-                <p>
-                    Resolução: a preencher<br>
-                    Taxa de atualização: a preencher
-                </p>
-                <p><b>R$ 0.000,00</b></p>
-                <a href="https://wa.me/5543999259899?text=Ola! Tenho interesse no Monitor 24 polegadas">
-                    Comprar pelo WhatsApp
-                </a>
-            </td>
-            <td align="center" width="33%">&nbsp;</td>
-            <td align="center" width="33%">&nbsp;</td>
-        </tr>
-    </table>
+/* -------------------------------------------------------------
+   3. BANNER (1ª tabela da página)
+   ------------------------------------------------------------- */
+table:nth-of-type(1) td {
+  padding: 0;                                 /* tira o espaço em volta do banner, ele encosta nas bordas da tela */
+  background-color: #16034a;                  /* faixa escura atrás do título, continua a cor do banner */
+}
+
+table:nth-of-type(1) img {
+  width: 100%;                                /* banner ocupa toda a largura */
+  height: auto;                               /* altura acompanha a largura, a imagem não fica esticada */
+}
+
+h1 {
+  font-family: "Barlow Condensed", Arial, sans-serif; /* fonte estreita, combina com a letra do banner */
+  font-size: 2.6rem;                          /* tamanho do título TechStore */
+  letter-spacing: 1px;                        /* afasta um pouco as letras */
+  color: #ffffff;                             /* título em branco puro */
+  margin: 24px 0 0;                           /* espaço acima do título */
+}
+
+h1 + p {
+  color: #f4a6c6;                             /* frase "Informática e Eletrônicos" em rosa (mesma cor dos triângulos do banner) */
+  margin: 0 0 20px;                           /* aproxima a frase do título e dá espaço embaixo */
+  font-size: 1.1rem;                          /* frase um pouco maior que o texto normal */
+}
 
 
-    <!-- ============================================================ -->
-    <!-- CATEGORIA: PERIFÉRICOS                                        -->
-    <!-- ============================================================ -->
-    <h3 id="perifericos">Periféricos</h3>
-    <table border="1" width="100%" cellpadding="12">
-        <tr>
-            <td align="center" width="33%">
-                <!-- Coloque aqui a imagem (ex.: teclado.png) -->
-                [ IMAGEM DO PRODUTO ]<br>
-                <!-- <img src="teclado.png" alt="Teclado Mecânico" width="150"> -->
-                <h3>Teclado Mecânico</h3>
-                <p>
-                    <b>Destaque:</b> Oferta<br>
-                    Tipo de switch: a preencher
-                </p>
-                <p><b>R$ 0.000,00</b></p>
-                <a href="https://wa.me/5543999259899?text=Ola! Tenho interesse no Teclado Mecanico">
-                    Comprar pelo WhatsApp
-                </a>
-            </td>
+/* -------------------------------------------------------------
+   4. MENU (2ª tabela da página)
+   ------------------------------------------------------------- */
+table:nth-of-type(2) {
+  position: sticky;                           /* o menu "gruda" no topo da tela quando a página rola */
+  top: 0;                                     /* gruda exatamente no topo */
+  z-index: 10;                                /* fica por cima das outras coisas ao rolar */
+  background-color: #ffffff;                  /* menu em faixa branca, separa o topo escuro do conteúdo */
+  box-shadow: 0 2px 10px rgba(22, 3, 74, 0.08); /* sombra leve embaixo do menu, dá sensação de "flutuar" */
+}
 
-            <td align="center" width="33%">
-                <!-- Coloque aqui a imagem (ex.: mouse.png) -->
-                [ IMAGEM DO PRODUTO ]<br>
-                <!-- <img src="mouse.png" alt="Mouse sem fio" width="150"> -->
-                <h3>Mouse sem fio</h3>
-                <p>Sensibilidade (DPI): a preencher</p>
-                <p><b>R$ 0.000,00</b></p>
-                <a href="https://wa.me/5543999259899?text=Ola! Tenho interesse no Mouse sem fio">
-                    Comprar pelo WhatsApp
-                </a>
-            </td>
+table:nth-of-type(2) td {
+  padding: 12px;                              /* altura da faixa do menu */
+  color: #cfcbe0;                             /* cor das barrinhas | entre os links (cinza claro, discretas) */
+}
 
-            <td align="center" width="33%">
-                <!-- Coloque aqui a imagem (ex.: headset.png) -->
-                [ IMAGEM DO PRODUTO ]<br>
-                <!-- <img src="headset.png" alt="Headset Gamer" width="150"> -->
-                <h3>Headset Gamer</h3>
-                <p>Áudio: a preencher</p>
-                <p><b>R$ 0.000,00</b></p>
-                <a href="https://wa.me/5543999259899?text=Ola! Tenho interesse no Headset Gamer">
-                    Comprar pelo WhatsApp
-                </a>
-            </td>
-        </tr>
-    </table>
+a {
+  color: #16034a;                             /* cor dos links (azul-marinho da marca) */
+  text-decoration: none;                      /* tira o sublinhado */
+  font-weight: 600;                           /* links em seminegrito */
+  padding: 6px 14px;                          /* área em volta do link, fica mais fácil de clicar */
+  border-radius: 20px;                        /* arredonda os cantos (formato de pílula no hover) */
+  transition: background-color 0.2s, color 0.2s; /* a troca de cor acontece suave, em 0,2 segundo */
+}
+
+a:hover {
+  background-color: #e8457c;                  /* ao passar o mouse, aparece um fundo rosa forte */
+  color: #ffffff;                             /* e o texto do link fica branco */
+}
 
 
-    <!-- ============================================================ -->
-    <!-- CATEGORIA: COMPONENTES                                        -->
-    <!-- ============================================================ -->
-    <h3 id="componentes">Componentes</h3>
-    <table border="1" width="100%" cellpadding="12">
-        <tr>
-            <td align="center" width="33%">
-                <!-- Coloque aqui a imagem (ex.: ssd.png) -->
-                [ IMAGEM DO PRODUTO ]<br>
-                <!-- <img src="ssd.png" alt="SSD 1TB" width="150"> -->
-                <h3>SSD 1TB</h3>
-                <p>Velocidade de leitura: a preencher</p>
-                <p><b>R$ 0.000,00</b></p>
-                <a href="https://wa.me/5543999259899?text=Ola! Tenho interesse no SSD 1TB">
-                    Comprar pelo WhatsApp
-                </a>
-            </td>
-            <td align="center" width="33%">&nbsp;</td>
-            <td align="center" width="33%">&nbsp;</td>
-        </tr>
-    </table>
+/* -------------------------------------------------------------
+   5. TÍTULOS DAS SEÇÕES (Nossos Produtos, Sobre, Contato)
+   ------------------------------------------------------------- */
+h2 {
+  font-family: "Barlow Condensed", Arial, sans-serif; /* mesma fonte do título principal */
+  font-size: 2rem;                            /* tamanho dos títulos de seção */
+  color: #16034a;                             /* títulos em azul-marinho da marca */
+  max-width: 1100px;                          /* largura máxima, alinha com a área dos produtos */
+  margin: 48px auto 8px;                      /* espaço em cima, centraliza o bloco e pouco espaço embaixo */
+  padding: 0 20px 0 16px;                     /* afasta o texto da borda da tela (resolve o "Nossos" cortado) */
+  border-left: 5px solid #e8457c;             /* barrinha rosa à esquerda do título */
+}
+
+h2 ~ p {
+  max-width: 1100px;                          /* parágrafos do Sobre e do Contato com a mesma largura dos títulos */
+  margin: 0 auto;                             /* centraliza o bloco de texto */
+  padding: 0 20px 0 21px;                     /* alinha o texto com o título (5px da barrinha + 16px) */
+}
 
 
-    <!-- ============================================================ -->
-    <!-- TABELA COMPARATIVA                                            -->
-    <!-- Aqui a tabela está no uso CORRETO: dados em linhas/colunas.  -->
-    <!-- ============================================================ -->
-    <h2>Compare os modelos de Notebook</h2>
-    <table border="1" width="100%" cellpadding="10">
-        <tr>
-            <th>Modelo</th>
-            <th>Processador</th>
-            <th>Memória</th>
-            <th>Armazenamento</th>
-            <th>Preço</th>
-        </tr>
-        <tr>
-            <td align="center">Básico</td>
-            <td align="center">a preencher</td>
-            <td align="center">a preencher</td>
-            <td align="center">a preencher</td>
-            <td align="center">R$ 0.000,00</td>
-        </tr>
-        <tr>
-            <td align="center">Intermediário</td>
-            <td align="center">a preencher</td>
-            <td align="center">a preencher</td>
-            <td align="center">a preencher</td>
-            <td align="center">R$ 0.000,00</td>
-        </tr>
-        <tr>
-            <td align="center">Gamer</td>
-            <td align="center">a preencher</td>
-            <td align="center">a preencher</td>
-            <td align="center">a preencher</td>
-            <td align="center">R$ 0.000,00</td>
-        </tr>
-    </table>
+/* -------------------------------------------------------------
+   6. PRODUTOS (a tabela que vem logo depois do h2)
+   ------------------------------------------------------------- */
+h2 + table {
+  border-collapse: separate;                  /* separa as células para elas virarem "cartões" */
+  border-spacing: 20px;                       /* espaço entre um cartão e outro */
+  max-width: 1140px;                          /* largura máxima da vitrine em telas grandes */
+  margin: 0 auto;                             /* centraliza a vitrine */
+}
+
+h2 + table td {
+  background-color: #ffffff;                  /* fundo branco do cartão, destaca do fundo cinza da página */
+  border: 1px solid #e4e1ee;                  /* borda fina e clara do cartão */
+  border-radius: 16px;                        /* cantos arredondados */
+  padding: 20px;                              /* espaço interno do cartão */
+  vertical-align: top;                        /* conteúdo começa no topo, mesmo se um cartão tiver mais texto */
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; /* animação suave do efeito de hover */
+}
+
+h2 + table td:hover {
+  transform: translateY(-6px);                /* o cartão "sobe" 6px ao passar o mouse */
+  border-color: #e8457c;                      /* e a borda fica rosa */
+  box-shadow: 0 10px 24px rgba(22, 3, 74, 0.12); /* e ganha uma sombra, como se saísse da página */
+}
+
+h2 + table img {
+  width: 150px;                               /* largura da foto do produto */
+  height: 150px;                              /* altura da foto do produto */
+  object-fit: contain;                        /* a foto cabe inteira no quadrado, sem distorcer */
+  border-radius: 12px;                        /* cantos arredondados da foto */
+}
+
+h2 + table br {
+  display: none;                              /* esconde o <br> vazio que fica antes da imagem */
+}
+
+h3 {
+  font-family: "Barlow Condensed", Arial, sans-serif; /* nome do produto na fonte dos títulos */
+  font-size: 1.4rem;                          /* tamanho do nome do produto */
+  color: #16034a;                             /* nome em azul-marinho */
+  margin: 16px 0 4px;                         /* espaço acima e abaixo do nome */
+}
+
+h2 + table td p {
+  margin: 4px 0;                              /* aproxima os parágrafos dentro do cartão */
+  color: #6e6987;                             /* descrição em cinza, menos destaque que o nome */
+}
+
+h2 + table td p:last-child {
+  font-size: 1.5rem;                          /* preço grande (é o último parágrafo do cartão) */
+  font-weight: 600;                           /* preço em seminegrito */
+  color: #e8457c;                             /* preço em rosa forte, para chamar atenção */
+  margin-top: 12px;                           /* afasta o preço da descrição */
+}
 
 
-    <!-- Voltar para a página inicial -->
-    <p><a href="index.html">&laquo; Voltar ao início</a></p>
+/* -------------------------------------------------------------
+   7. RODAPÉ (última tabela da página)
+   ------------------------------------------------------------- */
+table:last-of-type {
+  margin-top: 56px;                           /* espaço entre o Contato e o rodapé */
+}
+
+table:last-of-type td {
+  padding: 0;                                 /* rodapé encosta nas bordas, igual ao banner */
+}
+
+table:last-of-type img {
+  width: 100%;                                /* rodapé ocupa toda a largura */
+  height: auto;                               /* corrige a imagem esticada pelo height="180" do HTML */
+}
 
 
-    <!-- ============================================================ -->
-    <!-- RODAPÉ (igual ao da página inicial)                          -->
-    <!-- ============================================================ -->
-    <table border="1" width="100%" cellpadding="12">
-        <tr>
-            <td align="center">
-                <img src="foot.png" alt="Rodapé da TechStore" width="100%">
-            </td>
-        </tr>
-    </table>
+/* -------------------------------------------------------------
+   8. CELULAR (telas com até 700px de largura)
+   ------------------------------------------------------------- */
+@media (max-width: 700px) {
+  h2 + table,
+  h2 + table tbody,
+  h2 + table tr,
+  h2 + table td {
+    display: block;                           /* no celular, a tabela deixa de ser tabela: um cartão embaixo do outro */
+    width: auto;                              /* ignora o width="33%" do HTML */
+  }
 
-</body>
-</html>
+  h2 + table td {
+    margin: 0 16px 16px;                      /* espaço em volta de cada cartão no celular */
+  }
 
+  a {
+    padding: 6px 8px;                         /* links do menu mais compactos para caber na tela */
+  }
+}
